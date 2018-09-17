@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'stylesheet' href = 'css/side-bar%20&%20header.css'/>
+    <title>Title</title>
+</head>
+<body>
+
+<header>
+
+  <p1 class = "Domain-name">DocJoshPeeler</p1>
+  <nav>
+    <li> <a class = 'active' href = '#home'>Home</a> </li>
+    <li><a href = '#blogposts'>Blogposts</a></li>
+    <li><a href = '#Store'>Store</a></li>
+    <li><a href = '#podcasts'>Podcasts</a></li>
+    <li><a href = '#forums'>Forums</a></li>
+  </nav>
+
+</header>
+
+<aside>
+  <ol class = 'media_links'>
+    <a href = '#'>
+      <img src ='img/twitter_icon.png'>
+    </a>
+    <a href = '#'>
+      <img src ='img/instagram_icon.png'>
+    </a>
+    <a href = '#'>
+      <img src ='img/facebook_icon.png'>
+    </a>
+  </ol>
+
+</aside>
+
+<main>
+
+
+
+
+
+</main>
+
+</body>
+</html>
 
