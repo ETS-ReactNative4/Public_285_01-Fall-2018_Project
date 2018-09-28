@@ -8,8 +8,12 @@ export default class Navbar extends Component {
       <nav className="navbar navbar-expand-sm">
         <div className="container">
         <Link className="navbar-brand" to="/">Doc Josh</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamburger" aria-controls="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon">
+          <div className="hamburger-icon"></div>
+          <div className="hamburger-icon"></div>
+          <div className="hamburger-icon"></div>
+          </span>
         </button>
 
           <div className="collapse navbar-collapse" id="navbarsExample03">
