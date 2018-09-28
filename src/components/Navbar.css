@@ -7,6 +7,9 @@ a {
     font-weight: 200;
 }
 
-.navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;..");
-  }
+.hamburger-icon {
+    width: 35px;
+    height: 5px;
+    background-color: #444;
+    margin: 6px 0;
+}
