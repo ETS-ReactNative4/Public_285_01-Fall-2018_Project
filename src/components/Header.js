@@ -11,15 +11,6 @@ export class Header extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           </header>
 
-          <div className="taskbar">
-              <ul>
-                  <li className="task"><a href="index.html">Home</a></li>
-                  <li className="task"><a href="#Blogs">Blogs</a></li>
-                  <li className="task"><a href="store.html">Store</a></li>
-                  <li className="task"><a href="#Podcasts">Podcasts</a></li>
-              </ul>
-          </div>
-
           <div className="navbar">
               <ul>
                   <li><a href="https://twitter.com/">Twitter</a></li>
