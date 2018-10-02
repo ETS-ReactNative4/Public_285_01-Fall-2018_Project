@@ -40,7 +40,6 @@ a:link, a:visited {
     padding: 5px;
 }
 a:hover, a:active {
-    background-color: blue;
 }
 .navbar{
     position: absolute;
