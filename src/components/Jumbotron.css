@@ -1,0 +1,22 @@
+.container {
+    padding-top: 50px;
+    height: auto;
+}
+
+.banner {
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    height: auto;
+}
+.banner .jumbotron{
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    color: rgb(104, 104, 104);
+    margin: 0px;
+}

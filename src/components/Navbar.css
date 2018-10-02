@@ -1,0 +1,28 @@
+.navbar-brand {
+    color: rgb(87, 87, 255);
+}
+
+.navbar {
+    background-color: whitesmoke;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-container {
+    padding: 0px;
+}
+
+a {
+    color:#444;
+    font-weight: 200;
+}
+
+.hamburger-icon {
+    width: 35px;
+    height: 5px;
+    background-color: #444;
+    margin: 6px 0;
+}
+
+
+
