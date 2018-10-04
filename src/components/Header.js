@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../stylesheets/Header.css';
+import Login from './Login';
+
 
 export class Header extends Component {
     render() {
@@ -10,14 +12,15 @@ export class Header extends Component {
           <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           </header>
+        
+        <Login />
 
-          <div className="navbar">
+          <div className="socialMedia">
               <ul>
                   <li><a href="https://twitter.com/">Twitter</a></li>
                   <li><a href="https://www.facebook.com/">Facebook</a></li>
                   <li><a href="https://www.instagram.com/">Instagram</a></li>
               </ul>
-
           </div>
 
       </div>

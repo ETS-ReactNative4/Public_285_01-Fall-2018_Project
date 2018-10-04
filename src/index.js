@@ -18,18 +18,18 @@ class App extends React.Component {
               <Header/>
               <BrowserRouter>
               <div>
-              <div className="taskbar">
+              <div className="navBar">
               <ul>
-                  <li className="task">
+                  <li className="nav">
                      <Link to="/">Home</Link>
                   </li>
-                  <li className="task">
+                  <li className="nav">
                      <Link to="/blogs">Blogs</Link>
                   </li>
-                  <li className="task">
+                  <li className="nav">
                      <Link to="/store">Store</Link>
                   </li>
-                  <li className="task">
+                  <li className="nav">
                       <Link to="/podcasts">Podcasts</Link>
                   </li>
               </ul>
