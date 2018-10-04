@@ -5,9 +5,7 @@ body {
 }
 
 .signout{
-  color: white;
-  background-color: green;
-  position: relative;
-  top: -49px;
-  left: 1220px;
+  position: absolute;
+  left: 1210px;
+  top: 102px;
 }

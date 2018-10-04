@@ -49,8 +49,7 @@ a:hover, a:active {
 }
 
 .g-signin2 {
-    position: relative;
-    top: 0px;
+    position: absolute;
     left: 1350px;
 }
 
