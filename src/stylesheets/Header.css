@@ -20,7 +20,7 @@
 }
 .taskbar {
     position: absolute;
-    top: 14%;
+    top: 72%;
     right: 35%;
     text-align: center;
     list-style-type: none;
@@ -47,7 +47,7 @@ a:hover, a:active {
 }
 .navbar{
     position: absolute;
-    top: 75%;
+    top: 420%;
     left: 2%;
 }
 
