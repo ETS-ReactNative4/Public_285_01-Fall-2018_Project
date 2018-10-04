@@ -48,6 +48,12 @@ a:hover, a:active {
     left: 50px;
 }
 
+.g-signin2 {
+    position: relative;
+    top: 0px;
+    left: 1350px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
