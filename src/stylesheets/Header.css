@@ -17,8 +17,13 @@
 }
 .navBar {
     position: absolute;
+<<<<<<< HEAD
     top: 100px;
     right: 500px;
+=======
+    top: 72%;
+    right: 35%;
+>>>>>>> c287f6ea3fb134fa3d677eb43b016a74684b8862
     text-align: center;
     list-style-type: none;
 }
@@ -40,8 +45,17 @@ a:link, a:visited {
     padding: 5px;
 }
 a:hover, a:active {
+<<<<<<< HEAD
     background-color: rgba(7, 7, 173, 0.781);
      
+=======
+    background-color: blue;
+}
+.navbar{
+    position: absolute;
+    top: 420%;
+    left: 2%;
+>>>>>>> c287f6ea3fb134fa3d677eb43b016a74684b8862
 }
 .socialMedia{
     position: absolute;
