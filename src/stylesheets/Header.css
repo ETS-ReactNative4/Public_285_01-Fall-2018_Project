@@ -21,10 +21,11 @@
 .taskbar {
     position: absolute;
     top: 72%;
-    right: 35%;
-    width: 35%;
+    right: 30%;
     text-align: center;
     list-style-type: none;
+    height: 10%;
+    width: 40%;
 }
 .task{
     float: left;

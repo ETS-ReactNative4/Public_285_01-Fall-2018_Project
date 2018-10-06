@@ -18,7 +18,7 @@ class App extends React.Component {
               <Header/>
               <BrowserRouter>
               <div>
-              <div className="taskbar">
+            <div className="taskbar">
               <ul>
                   <li className="task">
                      <Link to="/">Home</Link>
@@ -33,7 +33,7 @@ class App extends React.Component {
                       <Link to="/podcasts">Podcasts</Link>
                   </li>
               </ul>
-          </div>
+            </div>
                    <Route path="/" exact strict component={Home} />
                    <Route path="/blogs" exact strict component={Blogs} />
                    <Route path="/podcasts" exact strict component={Podcasts} />
