@@ -19,11 +19,11 @@
     position: absolute;
 
     top: 72%;
-    right: 35%;
-
-    width: 35%;
+    right: 30%;
     text-align: center;
     list-style-type: none;
+    height: 10%;
+    width: 40%;
 }
 .nav{
     float: left;
@@ -55,8 +55,24 @@ a:hover, a:active {
     left: 2%;
     width: 10%;
 
+ /* why is this not working */
+a.nav:link, a.nav:visited {
+    display: block;
+    width: 120px;
+    background-color: white;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
 }
-.socialMedia{
+
+.navbar img{
+    width: 40px;
+    height: 40px;
+}
+.g-signin2 {
     position: absolute;
     top: 600px;
     left: 50px;

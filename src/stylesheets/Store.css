@@ -1,0 +1,39 @@
+.title {
+    color: black;
+    position: absolute;
+    top: 120%;
+    left: 40%;
+}
+
+.item1{
+    position: absolute;
+    top: 160%;
+    left: 10%;
+}
+.item2{
+    position: absolute;
+    top: 160%;
+    left: 30%;
+}
+
+.item3{
+    position: absolute;
+    top: 160%;
+    left: 50%;
+}
+
+.thumbnail img {
+    max-height: 150px;
+}
+
+.thumbnail description {
+    color: lightgray;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 120%;
+}
+a.addCart {
+    background-color: green;
+}
