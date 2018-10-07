@@ -1,17 +1,54 @@
 import React, { Component } from 'react';
-import '../stylesheets/Home.css';
+import '../stylesheets/Store.css';
 
 export class Store extends Component {
     render() {
         return(
             <div className="Home">
+               <h1 className="title">Store</h1>
+                <div className="item1">
+                  <div className="thumbnail">
+                     <img src="https://1.bp.blogspot.com/-STXLqSdhkqs/UWVT8z02sbI/AAAAAAAC6J0/mvW8SvUPcBs/s400/Gatsby___1A.jpg" alt="..."></img>
+                       <div className="caption">
+                         <h3>The Great Gatsby</h3>
+                          <p className="description">Great Book!!!!!!</p>
+                        <div>
+                            <div className="price">12$</div>
+                            <a href="#" className="addCart" role="button">Cart</a>
+                        </div>
+                      </div>
+                  </div>
+             </div>
 
-                <h1 className="title">Store</h1>
+                       <div className="item2">
+                  <div className="thumbnail">
+                     <img src="https://1.bp.blogspot.com/-STXLqSdhkqs/UWVT8z02sbI/AAAAAAAC6J0/mvW8SvUPcBs/s400/Gatsby___1A.jpg" alt="..."></img>
+                       <div className="caption">
+                         <h3>The Great Gatsby</h3>
+                          <p className="description">Great Book!!!!!!</p>
+                        <div>
+                            <div className="price">12$</div>
+                            <a href="#" className="addCart" role="button">Cart</a>
+                        </div>
+                      </div>
+                  </div>
+             </div>
 
-                <p className="info">
-                        This is where Store html goes
-                </p>
-            </div>
+                       <div className="item3">
+                  <div className="thumbnail">
+                     <img src="https://1.bp.blogspot.com/-STXLqSdhkqs/UWVT8z02sbI/AAAAAAAC6J0/mvW8SvUPcBs/s400/Gatsby___1A.jpg" alt="..."></img>
+                       <div className="caption">
+                         <h3>The Great Gatsby</h3>
+                          <p className="description">Great Book!!!!!!</p>
+                        <div>
+                            <div className="price">12$</div>
+                            <a href="#" className="addCart" role="button">Cart</a>
+                        </div>
+                      </div>
+                  </div>
+             </div>
+
+    </div>
         );
     }
 }

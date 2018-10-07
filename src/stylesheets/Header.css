@@ -57,6 +57,22 @@ a:hover, a:active {
     width: 10%;
 }
 
+a.nav:link, a.nav:visited {
+    display: block;
+    width: 120px;
+    background-color: white;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.navbar img{
+    width: 40px;
+    height: 40px;
+}
 .g-signin2 {
     position: absolute;
     left: 87%;
