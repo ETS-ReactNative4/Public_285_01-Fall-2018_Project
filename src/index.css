@@ -3,12 +3,16 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  min-width: 800px;
   position: relative;
   font-family: sans-serif;
 }
 
-.signout{
-  position: absolute;
+a.signout:link, a.signout:visited{
+  position: relative;
   left: 78%;
-  top: 72%;
+  top: 75%;
+  width: 7%;
+  padding: .3%;
+  background-color: red;
 }
