@@ -1,23 +1,26 @@
 .Head {
-  text-align: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .App-logo {
   position: relative;
-  top: 50px;
-  right: 600px;
+  top: 15%;
+  right: 35%;
   animation: App-logo-spin infinite 20s linear;
   height: 100px;
 }
 
 .App-header {
+  width: 100%;
   background-color: darkred;
   height: 15%;
   color: white;
 }
-.navBar {
-    position: absolute;
 
+.taskbar {
+    position: absolute;
     top: 72%;
     right: 30%;
     text-align: center;
@@ -25,17 +28,21 @@
     height: 10%;
     width: 40%;
 }
-.nav{
+
+.task{
     float: left;
 }
+
 ul {
     list-style-type: none;
 }
 
+
+
 a:link, a:visited {
     display: block;
     width: 120px;
-    background-color: #e70a0ad5 ;
+    background-color: red;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -45,17 +52,16 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: rgba(7, 7, 173, 0.781);
-
+    background-color: blue;
 }
-     
+
 .navbar{
     position: absolute;
     top: 420%;
     left: 2%;
     width: 10%;
+}
 
- /* why is this not working */
 a.nav:link, a.nav:visited {
     display: block;
     width: 120px;
@@ -72,10 +78,10 @@ a.nav:link, a.nav:visited {
     width: 40px;
     height: 40px;
 }
+
 .g-signin2 {
     position: absolute;
-    top: 600px;
-    left: 50px;
+    left: 87%;
 }
 
 @keyframes App-logo-spin {

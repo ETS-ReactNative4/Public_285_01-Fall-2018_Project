@@ -14,11 +14,11 @@ export class Header extends Component {
 
           <div className="navbar">
               <ul>
-                  <li><a className="nav" href="https://twitter.com/"><img src="http://ratopati.prixa.net/media/albums/twitter_AvtSsRk7TV.png"></img>
+                  <li><a className="nav" href="https://twitter.com/"><img src="http://ratopati.prixa.net/media/albums/twitter_AvtSsRk7TV.png" alt="twitter"></img>
                     </a></li>
-                  <li><a className="nav" href="https://www.facebook.com/"><img src="http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19760.png"></img>
+                  <li><a className="nav" href="https://www.facebook.com/"><img src="http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19760.png" alt="facebook"></img>
                   </a></li>
-                  <li><a className="nav" href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"></img>
+                  <li><a className="nav" href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png" alt="instagram"></img>
                   </a></li>
               </ul>
 
