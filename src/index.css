@@ -14,5 +14,10 @@ a.signout:link, a.signout:visited{
   top: 75%;
   width: 7%;
   padding: .3%;
-  background-color: red;
+  background-color: firebrick;
+}
+
+a.signout:hover {
+  background-color: maroon;
+  text-decoration: none;
 }

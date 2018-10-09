@@ -14,7 +14,7 @@ export class Store extends Component {
                           <p className="description">Great Book!!!!!!</p>
                         <div>
                             <div className="price">12$</div>
-                            <a href="#" className="addCart" role="button">Cart</a>
+                            <a href="#" className="addCart" role="button">Add to Cart</a>
                         </div>
                       </div>
                   </div>
@@ -25,10 +25,10 @@ export class Store extends Component {
                      <img src="https://1.bp.blogspot.com/-STXLqSdhkqs/UWVT8z02sbI/AAAAAAAC6J0/mvW8SvUPcBs/s400/Gatsby___1A.jpg" alt="..."></img>
                        <div className="caption">
                          <h3>The Great Gatsby</h3>
-                          <p className="description">Great Book!!!!!!</p>
+                          <p className="description">Another Great Book!!!!!!</p>
                         <div>
-                            <div className="price">12$</div>
-                            <a href="#" className="addCart" role="button">Cart</a>
+                            <div className="price">13$</div>
+                            <a href="#" className="addCart" role="button">Add to Cart</a>
                         </div>
                       </div>
                   </div>
@@ -39,10 +39,10 @@ export class Store extends Component {
                      <img src="https://1.bp.blogspot.com/-STXLqSdhkqs/UWVT8z02sbI/AAAAAAAC6J0/mvW8SvUPcBs/s400/Gatsby___1A.jpg" alt="..."></img>
                        <div className="caption">
                          <h3>The Great Gatsby</h3>
-                          <p className="description">Great Book!!!!!!</p>
+                          <p className="description">Third Great Book!!!!!!</p>
                         <div>
-                            <div className="price">12$</div>
-                            <a href="#" className="addCart" role="button">Cart</a>
+                            <div className="price">14$</div>
+                            <a href="#" className="addCart" role="button">Add to Cart</a>
                         </div>
                       </div>
                   </div>
