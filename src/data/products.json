@@ -1,0 +1,22 @@
+{
+"products" : [
+    {
+    "imagePath": "https://1.bp.blogspot.com/-STXLqSdhkqs/UWVT8z02sbI/AAAAAAAC6J0/mvW8SvUPcBs/s400/Gatsby___1A.jpg",
+    "title": "The Great Gatsby",
+    "description" : "Good Book !!!!!",
+    "price" : 10
+},
+{
+    "imagePath": "http://4.bp.blogspot.com/-ZpA-xuH78uU/TXbvmlbBMNI/AAAAAAAABGM/BXLloa04hZE/s1600/hatchet.jpg",
+    "title": "Hatchet",
+    "description" : "Great Book !!!!!",
+    "price" : 11
+},
+{
+    "imagePath": "https://allthingsscreen.files.wordpress.com/2013/08/casino-royale-book-cover.jpg",
+    "title": "Casino Royale",
+    "description" : "Amazing Book !!!!!",
+    "price" : 12
+}
+]
+}
