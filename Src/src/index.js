@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './stylesheets/index.css';
 import {BrowserRouter, Link} from "react-router-dom";
 import Route from "react-router-dom/Route"
 
@@ -9,7 +9,6 @@ import {Home} from './components/Home';
 import {Blogs} from './components/Blogs';
 import {Podcasts} from './components/Podcasts';
 import {Store} from './components/Store';
-import {Cart} from './components/Cart';
 import registerServiceWorker from './registerServiceWorker';
 
 class App extends React.Component {
@@ -39,7 +38,6 @@ class App extends React.Component {
                    <Route path="/blogs" exact strict component={Blogs} />
                    <Route path="/podcasts" exact strict component={Podcasts} />
                    <Route path="/store" exact strict component={Store} />
-                   <Route path="/store/cart" exact strict component={Cart} />
                 </div>
                </BrowserRouter>
                </div>

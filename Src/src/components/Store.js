@@ -2,21 +2,12 @@ import React, { Component } from 'react';
 import '../stylesheets/Store.css';
 
 import books from '../data/products.json';
-import cart from '../data/cartItems.json';
 
 export class Store extends Component {
 
 
 
     render() {
-        var m = 0;
-        var i = 0;
-        function addCart(book){
-            cart.cartItems.push(book);
-            i++;
-            m++;
-            }
-
         return(
             <div className="Home">
                <h1 className="title">Store</h1>
@@ -28,7 +19,7 @@ export class Store extends Component {
                           <p className="description">{books.products[0].description}</p>
                         <div>
                             <div className="price">{books.products[0].price}$</div>
-                            <a href="#" className="addCart" role="button" onClick={addCart(books.products[0])}>Add to Cart</a>
+                            <a href="#" className="addCart" role="button">Add to Cart</a>
                         </div>
                       </div>
                   </div>
@@ -42,7 +33,7 @@ export class Store extends Component {
                           <p className="description">{books.products[1].description}</p>
                         <div>
                             <div className="price">{books.products[1].price}$</div>
-                            <a href="#" className="addCart" role="button" onClick={addCart(books.products[1])}>Add to Cart</a>
+                            <a href="#" className="addCart" role="button">Add to Cart</a>
                         </div>
                       </div>
                   </div>
@@ -55,11 +46,12 @@ export class Store extends Component {
                           <p className="description">{books.products[2].description}</p>
                         <div>
                             <div className="price">{books.products[2].price}$</div>
-                            <a href="#" className="addCart" role="button" onClick={addCart(books.products[2])}>Add to Cart</a>
+                            <a href="#" className="addCart" role="button">Add to Cart</a>
                         </div>
                       </div>
                   </div>
              </div>
+
     </div>
         );
     }

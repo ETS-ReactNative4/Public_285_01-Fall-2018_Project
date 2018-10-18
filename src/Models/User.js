@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 
 //need to figure out how to push the google signin attributes to this
 let userSchema = mongoose.Schema({
