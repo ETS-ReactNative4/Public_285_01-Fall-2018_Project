@@ -49,7 +49,8 @@
     "spdx-exceptions": "^2.2.0",
     "sprintf-js": "^1.1.1",
     "statuses": "^1.5.0",
-    "style-loader": "^0.19.1"
+    "style-loader": "^0.19.1",
+    "untitled": "file:Src"
   },
   "devDependencies": {},
   "scripts": {
