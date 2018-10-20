@@ -23,7 +23,7 @@
 .backgroundVid{
     position: absolute;
     left: 0;
-    top: -16%;
+    top: 0;
     object-fit: fill;
     width: 100%;
 }
