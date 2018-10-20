@@ -60,7 +60,7 @@ a:hover, a:active {
 .navbar{
     position: absolute;
     top: 420%;
-    left: 2%;
+    left: -5%;
     width: 10%;
 }
 
