@@ -7,8 +7,9 @@ export class Home extends Component {
     render() {
         return(
             <div className="Home">
-                <div className="backgroundCover"></div>
+                <div className="backgroundCover">
                 <video class="backgroundVid" src ={Waves} autoplay="true" loop="true"></video>
+                </div>
 
                 <h1 className="title">Biography</h1>
 
