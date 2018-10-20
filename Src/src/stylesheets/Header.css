@@ -22,7 +22,7 @@
 
 .taskbar {
     position: absolute;
-    top: 72%;
+    top: 35%;
     right: 30%;
     text-align: center;
     list-style-type: none;
@@ -53,7 +53,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: #5d5c61;
+    background-color: #7395ae;
     opacity: 0.75;
     text-decoration: none;
 }
@@ -84,7 +84,8 @@ a.nav:link, a.nav:visited {
 
 .g-signin2 {
     position: absolute;
-    left: 87%;
+    top: 35%;
+    left: 86%;
 }
 
 @keyframes App-logo-spin {

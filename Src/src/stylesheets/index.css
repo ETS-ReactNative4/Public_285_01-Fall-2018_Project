@@ -11,15 +11,14 @@ body {
 
 a.signout:link, a.signout:visited{
   position: relative;
-  left: 78%;
-  top: 75%;
+  left: 86%;
   width: 7%;
   padding: .3%;
   background-color: none;
 }
 
 a.signout:hover {
-  background-color: #5d5c61;
+  background-color: #7395ae;
   opacity: 0.75;
   text-decoration: none;
 }
