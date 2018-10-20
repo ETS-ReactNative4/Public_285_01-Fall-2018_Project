@@ -18,7 +18,6 @@ a.signout:link, a.signout:visited{
 }
 
 a.signout:hover {
-  background-color: #7395ae;
-  opacity: 0.75;
+  color: #557a95;
   text-decoration: none;
 }

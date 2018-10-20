@@ -53,8 +53,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: #7395ae;
-    opacity: 0.75;
+    color: #557a95;
     text-decoration: none;
 }
 
