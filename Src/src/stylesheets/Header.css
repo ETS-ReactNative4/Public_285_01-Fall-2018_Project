@@ -43,7 +43,7 @@ ul {
 a:link, a:visited {
     display: block;
     width: 120px;
-    background-color: #5d5c61;
+    background-color: none;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -53,7 +53,8 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: #379683;
+    background-color: #5d5c61;
+    opacity: 0.75;
     text-decoration: none;
 }
 
@@ -67,7 +68,7 @@ a:hover, a:active {
 a.nav:link, a.nav:visited {
     display: block;
     width: 120px;
-    background-color: #7395ae;
+    background-color: none;
     color: white;
     text-decoration: none;
     text-align: center;
