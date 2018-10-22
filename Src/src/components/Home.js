@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../stylesheets/Home.css';
-import Josh from "../Josh1.jpg";
+import Josh from "../Josh2.jpg";
 import Waves from "../wavesBackground.mp4";
 
 export class Home extends Component {
