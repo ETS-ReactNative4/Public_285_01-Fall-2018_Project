@@ -5,11 +5,11 @@
     background-color: #085dcb;
 }
 
-.App-logo {
+.logo {
+  font-size: 36pt;
   position: relative;
   top: 15%;
   right: 35%;
-  animation: App-logo-spin infinite 20s linear;
   height: 100px;
 }
 
