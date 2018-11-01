@@ -8,7 +8,7 @@ let podcastSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(text) {
-                return text === "" || " ";
+                return text === "" || text === " ";
             },
             message: "Title cannot be blank!"
         }
@@ -19,7 +19,7 @@ let podcastSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(text) {
-                return text === "" || " ";
+                return text === "" || text === " ";
             },
             message: "There must be a summary!"
         }

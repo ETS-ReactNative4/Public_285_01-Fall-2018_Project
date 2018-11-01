@@ -1,4 +1,6 @@
 const Product = require('../Models/Product');
+const mongoose = require('mongoose');
+
 
 
 //Displays the product creation form with GET

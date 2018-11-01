@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
 import {BrowserRouter, Link} from "react-router-dom";
-import Route from "react-router-dom/Route"
+import Route from 'react-router-dom/Route';
 
 import {Header} from './components/Header';
 import {Home} from './components/Home';
@@ -12,6 +12,8 @@ import {Store} from './components/Store';
 import registerServiceWorker from './registerServiceWorker';
 
 class App extends React.Component {
+
+
     render() {
         return (
               <div>

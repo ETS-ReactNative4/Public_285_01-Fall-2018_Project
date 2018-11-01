@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 
 
 let blogSchema = mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
     title: {
         type: String,
-        required: true
+        required: [true,"A blog must have a name!"],
+        trim: true
     },
 
     created: {
@@ -14,9 +14,10 @@ let blogSchema = mongoose.Schema({
         default: Date.now
     },
 
-    body: {
+    blog_text: {
         type: String,
-        required: true
+        required: [true, "No blank posts"],
+        trim: true
     },
 
     comments: [{
@@ -27,13 +28,15 @@ let blogSchema = mongoose.Schema({
         },
         body: {
             type: String,
-            required: true
+            required: true,
+            trim: true
         },
         created: {
             type: Date,
             default: Date.now 
         }
     }]
+
 
 });
 
