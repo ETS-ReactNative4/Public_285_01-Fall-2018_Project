@@ -14,10 +14,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/blogs', blogRouter);
-app.use(express.static('public'))
-mongoose.connect('mongodb://localhost:27017:DocJosh', {useNewUrlParser: true})
-
-
+mongoose.connect('mongodb://localhost:27017/DocJosh', {useNewUrlParser: true}, (err) =>{
+    if (err) console.log(err);
+});
 
 mongoose.connection.on("connected", () => {
     console.log("connected");

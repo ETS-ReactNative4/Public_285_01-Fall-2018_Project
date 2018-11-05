@@ -17,16 +17,16 @@ exports.blog_create_post = (req, res) => {
     let newBlog = new Blog({
         title: req.body.title,
         blog_text: req.body.blog_text,
-        comments: req.body.comment
+        comments: req.body.comments
     });
     
     newBlog.save((err,doc) => {
-        if(err){
-            console.log(err)
-            return 
+        if(err) return console.log(err);
+        
+        else{
+            console.log(doc)   
+            return res.status(200).send(doc);
         }
-        res.status(200).send(doc);
-        console.log(doc)
     },
 
     

@@ -9,15 +9,10 @@ let blogSchema = mongoose.Schema({
         trim: true
     },
 
-    created: {
-        type: Date,
-        default: Date.now
-    },
-
+    
     blog_text: {
         type: String,
         required: [true, "No blank posts"],
-        trim: true
     },
 
     comments: [{
@@ -29,14 +24,17 @@ let blogSchema = mongoose.Schema({
         body: {
             type: String,
             required: true,
-            trim: true
         },
         created: {
             type: Date,
             default: Date.now 
         }
-    }]
+    }],
 
+    created: {
+        type: Date,
+        default: Date.now
+    }
 
 });
 
