@@ -4,6 +4,7 @@ const User = require('../Models/User');
 exports.createUser = (req, res) => {  
 }
 
+
 //Displays user info from a GET
 exports.checkUser = (req, res) => {
 

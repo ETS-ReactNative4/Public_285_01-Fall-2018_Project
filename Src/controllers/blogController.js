@@ -1,8 +1,8 @@
 const Blog = require('../Models/Blog');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
-
+const _ = require('lodash');
+const {ObjectID} = require('mongodb');
 
 
 //Displays the blog creation form with GET
@@ -34,12 +34,30 @@ exports.blog_create_post = (req, res) => {
 
 //Displays the Blog update-form on this GET
 exports.blog_update_get = (req, res) => {
-    res.send("NOT IMPLEMENTED: Blog update GET")
+    res.send("NOT IMPLEMENTED: Blog Update GET")
 }
 
-//Handles the Blog update on this POST
-exports.blog_update_post = (req, res) => {
-    res.send("NOT IMPLEMENTED: Blog update POST")
+//Handles the Blog update on this PATCH
+exports.blog_update_patch = (req, res) => {
+    let id = req.params.id;
+    let body = _.pick(req.body, ['title','blog_text','comments'])
+
+    console.log(body);
+
+    if (!ObjectID.isValid(id)){
+        return res.status(404).send({id : "There is no such post!"});
+    } 
+
+    Blog.findByIdAndUpdate(id, {$set: body}, {new : true}).then((Blog) =>{
+        if(!Blog){
+            return res.status(404).send({msg : "Something went wrong. Please, try again later"});
+        }
+        res.send({Blog});
+
+
+    }).catch((e) => {
+        res.status(400).send();
+    })
 }
 
 // Displays the Delete notification on GET

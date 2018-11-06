@@ -17,9 +17,13 @@ let userSchema = mongoose.Schema({
     },
     profile_pic: Buffer,
 
-    email: String,
-    OAuth_token: {
+    email:{ 
         type: String,
+        required: true
+    },
+
+    OAuth_token: {
+        type: [String, Date],
         required: true
     }
 });
