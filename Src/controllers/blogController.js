@@ -17,7 +17,6 @@ exports.blog_create_post = (req, res) => {
     let newBlog = new Blog({
         title: req.body.title,
         blog_text: req.body.blog_text,
-        comments: req.body.comments
     });
     
     newBlog.save((err,doc) => {
@@ -67,21 +66,46 @@ exports.blog_delete_get = (req, res) => {
 
 //Handles the deletion of a blog-post
 exports.blog_delete_post = (req, res) => {
-    res.send("NOT IMPLEMENTED: Blog delete POST")
+    let id = req.params.id;
+    console.log(id);
+
+    if (!ObjectID.isValid(id)){
+        return res.status(404).send({id : "There is no such post!"});
+    } 
+
+    Blog.findByIdAndDelete(id, (err, doc) => {
+
+        if (err) return res.status(400).send({msg : "Unable to Delete!"})
+
+        return res.status(200).send({msg :"Successfully Deleted", id : id})
+    })
 }
 
 //Displays the blog blurbs on GET
 exports.blog_blurbs = (req, res) => {
+    Blog.find()
+    .sort({created_at : 1})
+    .then(blogs => res.json(blogs))
+    .catch(err => res.status(400).json({msg : "There are no posts " }))
    
 }
 
 //Displays the full Blog (Title, Body, and Author) on GET
 exports.full_blog = (req, res, next) => {
-    res.send("NOT IMPLEMENTED: Full blog-post"+ req.param.id +"'s presentation")
+    res.send("NOT IMPLEMENTED: Full blog-post"+ req.params.id +"'s presentation")
     
 }
 
 //Displays the comments of the Blog on GET
 exports.blog_comments = (req, res) => {
-    res.send("NOT IMPLEMENTED: blog-post's"+ req.param.id+"'s comments")
+    res.send("NOT IMPLEMENTED: blog-post's"+ req.params.id+"'s comments")
+}
+
+
+function truncatedBody(text, length){
+    if (text.length <= length){
+        return text;
+    }
+
+    return text.substr(0, length-1) + "\u2026";
 }

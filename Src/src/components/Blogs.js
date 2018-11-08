@@ -6,11 +6,11 @@ export class Blogs extends Component {
         return(
             <div className="Blog">
 
-                <h1 className="blogTitle">Problems in Politics</h1>
+                <h1 className="blogTitle">God's Plans for Us Sinners</h1>
 
                 <p className="blogText">
-                        Things need to change right now. I am very experianced, 
-                        and I know what I am talking about. I am tired of the problems.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras in porta eros. Duis a mi tristique, aliquet nisl ut, dignissim. 
                 </p>
                 <div className="created">
                 created: October 30, 2018
