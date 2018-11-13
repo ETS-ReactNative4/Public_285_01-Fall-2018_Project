@@ -8,7 +8,7 @@ export class Header extends Component {
 
           <header className="App-header">
           <div className = "logo">DocJosh</div>
-          <div className="g-signin2" data-onsuccess="onSignIn"></div>
+          <div className="g-signin2" data-onsuccess="onSignIn" ></div>
           </header>
 
           <div className="navbar">

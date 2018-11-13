@@ -83,25 +83,41 @@ exports.blog_delete_post = (req, res) => {
 
 //Displays the blog blurbs on GET
 exports.blog_blurbs = (req, res) => {
+     //Should transform the request into enough info appropriate for a blurb
     Blog.find()
-    .sort({created_at : 1})
-    .then(blogs => res.json(blogs))
+    .select("title blog_text _id created")
+    .sort({created_at : 1})//from most recent to least recent
+    .then(blogs =>{  
+        res.json(blogs)})
     .catch(err => res.status(400).json({msg : "There are no posts " }))
    
 }
 
 //Displays the full Blog (Title, Body, and Author) on GET
 exports.full_blog = (req, res, next) => {
-    res.send("NOT IMPLEMENTED: Full blog-post"+ req.params.id +"'s presentation")
+   let id = req.params.id;
+   console.log(id);
+ 
+   if (!ObjectID.isValid(id)){
+    return res.status(404).send({id : "This post is not working!"});
+}
+
+    Blog.findById(id, (err, doc) => {
+
+        if(err) return res.status(404).send( {id :"There seems to be something wrong with this post"});
+
+        return res.status(200).send({Blog})
+
+    })
     
 }
 
-//Displays the comments of the Blog on GET
+//Displays the comments of the Blog on POST
 exports.blog_comments = (req, res) => {
     res.send("NOT IMPLEMENTED: blog-post's"+ req.params.id+"'s comments")
 }
 
-
+//use card style
 function truncatedBody(text, length){
     if (text.length <= length){
         return text;

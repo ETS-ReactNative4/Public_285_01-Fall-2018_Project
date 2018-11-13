@@ -6,16 +6,14 @@ let userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
 
     name: {
-        firstName: {
-            type: String,
-            required: true
-        },
-        lastName: {
-            type: String,
-        
-        }
+        type : String,
+        required: true
     },
-    profile_pic: Buffer,
+    
+    profile_pic: {
+        data : Buffer, 
+        contentType: String
+    },
 
     email:{ 
         type: String,
