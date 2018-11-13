@@ -4,29 +4,25 @@
     left: 20%;
     width: 50%;
 }
+
 .blogTitle{
-font-size: 16pt;
-font-weight: bold;
+    font-size: 24pt;
+    font-weight: bold;
 }
 
 .blogText{
-    font-size: 14pt;
+    font-size: 18pt;
 }
 
-.created{
-font-style: italic;
-}
-
-.comments{
-    position: absolute;
-    right: 10%;
+.blogCreated{
     font-size: 12pt;
+    position: absolute;
+    right: 0%;
 }
 
-.commentBody{
-    font-style: italic;
+a.blogCreate:hover, a.blogCreate:active{
+    color: black;
 }
 
-.commentDate{
-    font-style: italic;
-}
+
+
