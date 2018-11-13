@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const _ = require('lodash');
 const {ObjectID} = require('mongodb');
+const Comment = require('../Models/Comment')
 
 
 //Displays the blog creation form with GET
@@ -86,7 +87,7 @@ exports.blog_blurbs = (req, res) => {
      //Should transform the request into enough info appropriate for a blurb
     Blog.find()
     .select("title blog_text _id created")
-    .sort({created_at : 1})//from most recent to least recent
+    .sort({created : 1})//from most recent to least recent
     .then(blogs =>{  
         res.json(blogs)})
     .catch(err => res.status(400).json({msg : "There are no posts " }))
@@ -111,17 +112,44 @@ exports.full_blog = (req, res, next) => {
     })
     
 }
-
 //Displays the comments of the Blog on POST
-exports.blog_comments = (req, res) => {
-    res.send("NOT IMPLEMENTED: blog-post's"+ req.params.id+"'s comments")
+exports.blog_comments_POST = (req, res, next) => {
+    console.log("Comment Creation endpoint has been hit");
+    let id = req.params.id
+   
+    let newComment = new Comment({
+        blog: id,
+        user: req.body.name,
+        body: req.body.body,
+    })
+
+    newComment.save((err,doc) => {
+        if(err) return console.log(err);
+        
+        else{
+            console.log(doc)   
+            return res.status(200).send(doc);
+        }
+    })
+
 }
 
-//use card style
-function truncatedBody(text, length){
-    if (text.length <= length){
-        return text;
-    }
 
-    return text.substr(0, length-1) + "\u2026";
+//Displays the comments of the Blog on GET
+exports.blog_comments_GET = (req, res) => {
+    let id = req.params.id;
+
+    
+    Comment.find()
+    .select('user body blog')
+    .then(comments =>{
+        comments.forEach(comment =>{
+        if(!ObjectID.isValid(id) || id !== Comment.blog.id ){
+            return res.status(400).send({msg:"This comment does not go with this post!"})
+        }
+
+        return res.status(200).send({comment});
+    });
+    }).catch(err => res.status(400).Json({msg:" Unable to fetch the comments"}));
+
 }

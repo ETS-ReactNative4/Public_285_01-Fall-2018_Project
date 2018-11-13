@@ -15,21 +15,7 @@ let blogSchema = mongoose.Schema({
         required: [true, "No blank posts"],
     },
 
-    comments: [{
-        user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User',
-            required: true
-        },
-        body: {
-            type: String,
-            required: true,
-        },
-        created: {
-            type: Date,
-            default: Date.now 
-        }
-    }],
+    comments: [comment],
 
     created: {
         type: Date,
