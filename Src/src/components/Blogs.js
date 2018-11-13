@@ -36,13 +36,18 @@ export class Blogs extends Component {
         return(
             <div className="Blog">
 
+                <a href="http://localhost:3001/blogs/create"
+                target="_blank"
+                className="blogCreate"
+                role="button">Create Blog</a>
+
                 <ul>
                     {blogs.map(blog => (
                         <li key={blog.id}>
-                            Title: {blog.title} <br/> 
-                            Blog Text: {blog.blog_text} <br/>
-                            Created: {blog.created} <br/> 
-                            --------
+                            <div className="blogTitle">{blog.title} <br/></div>
+                            <div className="blogText">{blog.blog_text} <br/> </div>
+                            <div className="blogCreated">Created: {blog.created} <br/> </div>
+                            <div><br/><br/></div>
                         </li>
                     ))}
                 </ul>
