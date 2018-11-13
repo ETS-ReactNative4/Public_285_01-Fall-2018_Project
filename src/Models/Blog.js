@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Comment = require('../Models/Comment')
 
 
 
@@ -15,7 +16,10 @@ let blogSchema = mongoose.Schema({
         required: [true, "No blank posts"],
     },
 
-    comments: [comment],
+    comments: [{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Comment'
+    }],
 
     created: {
         type: Date,

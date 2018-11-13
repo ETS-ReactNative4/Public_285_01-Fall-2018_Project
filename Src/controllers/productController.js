@@ -77,11 +77,30 @@ exports.product_create_delete_post = (req, res) => {
     })}
 
 //Displays the product sample on GET
-exports.product_sample = (req, res) => {
-    res.send("NOT IMPLEMENTED: Product samples");
+exports.product_samples = (req, res) => {
+      //Should transform the request into enough info appropriate for a product sample
+      Product.find()
+      .select("imagePath title description _id price")
+      .sort({title : ascending})//from products A - Z
+      .then(products =>{  
+          res.json(products)})
+      .catch(err => res.status(400).json({msg : "There are no products " }));
 }
 
 //Displays the full product (name, description, price, seller) on GET
 exports.full_product = (req, res) => {
-    res.send("NOT IMPLEMENTED: Full product number "+ req.param.id +"'s presentation")
+    let id = req.params.id;
+    console.log(id);
+  
+    if (!ObjectID.isValid(id)){
+     return res.status(404).send({id : "This product is not working!"});
+ }
+ 
+     Product.findById(id, (err, doc) => {
+ 
+         if(err) return res.status(404).send( {id :"There seems to be something wrong with this product"});
+ 
+         return res.status(200).send({Product})
+ 
+     })
 }

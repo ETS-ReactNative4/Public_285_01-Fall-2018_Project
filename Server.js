@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const queryString = require('querystring');
 const _ = require('lodash');
 const {ObjectID} = require('mongodb');
-const Blog =require('./Src/Models/Blog');
+const Blog = require('./Src/Models/Blog');
 const blogRouter = require('./Src/Routes/blogRouter')
 const mongoose = require('mongoose')
 

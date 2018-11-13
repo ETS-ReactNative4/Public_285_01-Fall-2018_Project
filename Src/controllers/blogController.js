@@ -87,7 +87,7 @@ exports.blog_blurbs = (req, res) => {
      //Should transform the request into enough info appropriate for a blurb
     Blog.find()
     .select("title blog_text _id created")
-    .sort({created : 1})//from most recent to least recent
+    .sort({created : -1})//from most recent to least recent
     .then(blogs =>{  
         res.json(blogs)})
     .catch(err => res.status(400).json({msg : "There are no posts " }))
@@ -142,6 +142,8 @@ exports.blog_comments_GET = (req, res) => {
     
     Comment.find()
     .select('user body blog')
+    .populate('blog')
+    .populate('user')
     .then(comments =>{
         comments.forEach(comment =>{
         if(!ObjectID.isValid(id) || id !== Comment.blog.id ){
