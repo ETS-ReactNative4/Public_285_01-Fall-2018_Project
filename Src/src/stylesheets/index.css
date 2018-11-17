@@ -23,3 +23,9 @@ a.signout:hover {
   color: #557a95;
   text-decoration: none;
 }
+
+.createBlog{
+  position: absolute;
+  top: 15%;
+  left: 0%;
+}
