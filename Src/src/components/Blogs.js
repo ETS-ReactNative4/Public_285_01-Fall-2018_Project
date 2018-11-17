@@ -36,11 +36,6 @@ export class Blogs extends Component {
         return(
             <div className="Blog">
 
-                <a href="http://localhost:3001/blogs/create"
-                target="_blank"
-                className="blogCreate"
-                role="button">Create Blog</a>
-
                 <ul>
                     {blogs.map(blog => (
                         <li key={blog.id}>
