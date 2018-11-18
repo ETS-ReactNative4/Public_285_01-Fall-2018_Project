@@ -28,6 +28,10 @@
       no script
     </noscript>
 
+    <div class = "admin">
+    <button class = "blogButton" onClick="blogForm()">Create Blog</button>
+    </div>
+
     <div class = "createBlog" style = "display: none">
 
         <form id = "blog_submit" action = "/blogs/create" method="POST">
@@ -40,7 +44,7 @@
               <textarea id = "blog_text" name = "blog_text"></textarea>
           </div>
           <div>
-              <input type="submit" formmethod="post" value="Submit using POST">
+              <input type="submit" formmethod="post" value="Submit" class="submit">
           </div>
       </form>
     
@@ -76,7 +80,7 @@
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
         if (userEmail === "william.brown-8@selu.edu") {
-        $(".createBlog").css("display", "block");
+        $(".admin").css("display", "block");
       }
       }
 
@@ -87,7 +91,13 @@
         });
         $(".g-signin2").css("display","block");
         $(".signout").css("display", "none");
+        $(".admin").css("display", "none");
         $(".createBlog").css("display", "none");
+      }
+
+      function blogForm() {
+        $(".createBlog").css("display", "block");
+        $(".admin").css("display", "none");
       }
     </script>
 
