@@ -82,6 +82,8 @@ exports.product_samples = (req, res) => {
       Product.find()
       .select("imagePath title description _id price")
       .sort({title : ascending})//from products A - Z
+      .limit(perPage)
+      .skip(perPage * page)
       .then(products =>{  
           res.json(products)})
       .catch(err => res.status(400).json({msg : "There are no products " }));
@@ -100,7 +102,7 @@ exports.full_product = (req, res) => {
  
          if(err) return res.status(404).send( {id :"There seems to be something wrong with this product"});
  
-         return res.status(200).send({Product})
+         return res.status(200).send({doc})
  
      })
 }

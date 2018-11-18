@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const Comment = require('../Models/Comment')
-
+const Comment = require('../Models/Comment');
 
 
 let blogSchema = mongoose.Schema({
@@ -27,6 +26,7 @@ let blogSchema = mongoose.Schema({
     }
 
 });
+
 
 const Blog = mongoose.model('Blog', blogSchema);
 

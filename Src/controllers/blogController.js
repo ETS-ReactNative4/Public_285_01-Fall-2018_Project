@@ -108,7 +108,7 @@ exports.full_blog = (req, res) => {
    if (!ObjectID.isValid(id)){
     return res.status(404).send({id : "This post is not working!"});
 }
-    console.log("The API has passed the ID verification")
+
     Blog.findById(id, (err, doc) => {
         if(err) return res.status(404).send( {id :"There seems to be something wrong with this post"});
  
