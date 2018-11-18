@@ -15,6 +15,7 @@ exports.blog_create_get = (req, res) => {
 //Handles Blog create on POST
 exports.blog_create_post = (req, res) => {
    console.log("Blog_Create_post has been hit!")
+  
     let newBlog = new Blog({
         title: req.body.title,
         blog_text: req.body.blog_text,
@@ -25,11 +26,11 @@ exports.blog_create_post = (req, res) => {
         
         else{
             console.log(doc)   
-            return res.status(200).send(doc);
+            res.status(200).redirect("./");
         }
     },
 
-    
+
     )}
 
 //Displays the Blog update-form on this GET
@@ -85,35 +86,39 @@ exports.blog_delete_post = (req, res) => {
 //Displays the blog blurbs on GET
 exports.blog_blurbs = (req, res) => {
      //Should transform the request into enough info appropriate for a blurb
+     let perPage = 10
+     const page = Math.max(0, req.params.page)
     Blog.find()
     .select("title blog_text _id created")
     .sort({created : -1})//from most recent to least recent
+    .limit(perPage)
+    .skip(perPage * page)
     .then(blogs =>{  
-        res.json(blogs)})
+        res.json(blogs)   
+    })
     .catch(err => res.status(400).json({msg : "There are no posts " }))
    
 }
 
 //Displays the full Blog (Title, Body, and Author) on GET
-exports.full_blog = (req, res, next) => {
+exports.full_blog = (req, res) => {
    let id = req.params.id;
    console.log(id);
- 
+    
    if (!ObjectID.isValid(id)){
     return res.status(404).send({id : "This post is not working!"});
 }
-
+    console.log("The API has passed the ID verification")
     Blog.findById(id, (err, doc) => {
-
         if(err) return res.status(404).send( {id :"There seems to be something wrong with this post"});
-
-        return res.status(200).send({Blog})
+ 
+        return res.status(200).send({doc})
 
     })
     
 }
 //Displays the comments of the Blog on POST
-exports.blog_comments_POST = (req, res, next) => {
+exports.blog_comments_POST = (req, res) => {
     console.log("Comment Creation endpoint has been hit");
     let id = req.params.id
    
@@ -154,4 +159,13 @@ exports.blog_comments_GET = (req, res) => {
     });
     }).catch(err => res.status(400).Json({msg:" Unable to fetch the comments"}));
 
+}
+
+
+function truncatedBlog(text, length){
+    if (text <= length){
+        return text
+    }
+
+    return text.substring(0, length-1)+ "(see more)"
 }
