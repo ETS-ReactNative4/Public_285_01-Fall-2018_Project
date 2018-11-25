@@ -1,11 +1,15 @@
 const Product = require('../Models/Product');
 const mongoose = require('mongoose');
+const {ObjectID} = require('mongodb');
+const fs =require('fs');
+const path = require('path');
 
 
 
 //Displays the product creation form with GET
 exports.product_create_get = (req, res) => {
-    res.send("NOT IMPLEMENTED: Product create GET")
+    console.log("Product_Create_GET has been hit!")
+    res.sendFile('store_form.html', { root: path.join(__dirname, '../public') });    
 }
 
 //Handles product create on POST
@@ -17,13 +21,15 @@ exports.product_create_post = (req, res) => {
         description: req.body.description,
         price: req.body.price
     });
+    newProduct.imagePath.data = fs.readFileSync(req.file.path);
+    newProduct.imagePath.contentType = 'image/png';
     
     newProduct.save((err,doc) => {
         if(err) return console.log(err);
         
         else{
             console.log(doc)   
-            return res.status(200).send(doc);
+            return res.status(200).redirect("../store");
         }
     },
     )}
@@ -48,7 +54,8 @@ exports.product_create_update_post = (req, res) => {
         if(!Product){
             return res.status(404).send({msg : "Something went wrong. Please, try again later"});
         }
-        res.send({Product});
+       
+            res.redirect("./");
 
 
     }).catch((e) => {
@@ -72,16 +79,18 @@ exports.product_create_delete_post = (req, res) => {
     Product.findByIdAndDelete(id, (err, doc) => {
 
         if (err) return res.status(400).send({msg : "Unable to Delete!"})
-
-        return res.status(200).send({msg :"Successfully Deleted", id : id})
+        
+        return res.status(200).redirect("../store")
     })}
 
 //Displays the product sample on GET
 exports.product_samples = (req, res) => {
-      //Should transform the request into enough info appropriate for a product sample
+      //Should transform the request into enough info appropriate for a product 
+    let perPage = 10
+    const page = Math.max(0, req.params.page)
       Product.find()
       .select("imagePath title description _id price")
-      .sort({title : ascending})//from products A - Z
+      .sort({title : 1})//from products A - Z
       .limit(perPage)
       .skip(perPage * page)
       .then(products =>{  

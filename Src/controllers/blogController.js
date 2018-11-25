@@ -22,11 +22,15 @@ exports.blog_create_post = (req, res) => {
     });
     
     newBlog.save((err,doc) => {
-        if(err) return console.log(err);
+        if(err) {
+            console.log(err);
+            return res.redirect(".").json({msg : "There were invalid fields. re-enter data"})
+        
+        }
         
         else{
             console.log(doc)   
-            res.status(200).redirect("./");
+            res.status(200).redirect("/:page");
         }
     },
 
