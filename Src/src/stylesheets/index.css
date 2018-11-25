@@ -24,8 +24,38 @@ a.signout:hover {
   text-decoration: none;
 }
 
+.admin{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+
+.blogButton{
+  border: none;
+  background-color: #5d5c61;
+  color: white;
+}
+
+.blogButton:hover{
+  background-color: #557a95;
+  cursor: pointer;
+}
+
 .createBlog{
   position: absolute;
   top: 100%;
   left: 0%;
 }
+
+.submit{
+  border: none;
+  background-color: #5d5c61;
+  color: white;
+}
+
+.submit:hover{
+  background-color: #557a95;
+  cursor: pointer;
+}
+

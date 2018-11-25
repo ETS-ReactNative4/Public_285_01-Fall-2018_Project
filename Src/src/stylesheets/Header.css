@@ -58,9 +58,9 @@ a:hover, a:active {
 }
 
 .navbar{
-    position: absolute;
-    top: 420%;
-    left: -5%;
+    position: fixed;
+    top: 70%;
+    left: 0%;
     width: 10%;
 }
 
