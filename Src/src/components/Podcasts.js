@@ -9,18 +9,20 @@ export class Podcasts extends Component {
         super(props);
 
         this.state = {
-            resultyt: []
-        };
-        this.clicked = this.clicked.bind(this);
+            resultyt: [],
+            isLoaded: false,
+        }
     }
 
-    clicked(){
+    componentDidMount () {
         fetch(finalURL)
         .then((response) => response.json())
         .then((responseJson) => {
           //console.log(responseJson);
           const resultyt = responseJson.items.map(obj => "https://www.youtube.com/embed/"+obj.id.videoId);
-          this.setState({resultyt});
+          this.setState({
+              resultyt,
+              isLoaded: true,});
         })
         .catch((error) => {
           console.error(error);
@@ -30,11 +32,16 @@ export class Podcasts extends Component {
 
     render() {
 
+        var {isLoaded, resultyt} = this.state;
         console.log(this.state.resultyt);
 
+        if(!isLoaded) {
+            return(<div>Loading...</div>);
+        }
+
+        else{
+
         return(
-            <div>
-                <button className="getPodcasts" onClick={this.clicked}>Get Podcasts</button>
             <div className="Podcast">
 
                 {
@@ -48,8 +55,8 @@ export class Podcasts extends Component {
             
             
             </div>
-            </div>
         );
+        }
     }
 }
 
