@@ -1,0 +1,19 @@
+.Podcast{
+    position: absolute;
+    left: 30%;
+    margin-top: 5%;
+}
+
+.getPodcasts{
+    position: absolute;
+    top: 110%;
+    left: 44%;
+    border: none;
+    background-color: #5d5c61;
+    color: white;
+}
+
+.getPodcasts:hover{
+    background-color: #557a95;
+    cursor: pointer;
+  }
