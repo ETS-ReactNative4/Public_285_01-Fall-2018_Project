@@ -13,7 +13,7 @@ export class Blogs extends Component {
 
     componentDidMount() {
 
-        fetch('/blogs/:page')
+        fetch('/blogs')
             .then(res => res.json())
             .then(json => {
                 this.setState({
