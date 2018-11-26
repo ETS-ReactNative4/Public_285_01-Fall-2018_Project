@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const productSchema = new Schema({
-    imagePath: {
+    imagePath: {    
         data: Buffer, 
         contentType: String,
-        required : true
+        required : false
     },
     title: {
         type: String, 

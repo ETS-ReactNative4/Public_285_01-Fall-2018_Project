@@ -22,11 +22,12 @@ exports.blog_create_post = (req, res) => {
     });
     
     newBlog.save((err,doc) => {
-        if(err) return console.log(err);
-        
-        else{
+        if(err) {
+            console.log(err);
+            res.status(404).redirect("back")
+        } else{
             console.log(doc)   
-            res.status(200).redirect("./");
+            res.status(200).redirect("back");
         }
     },
 

@@ -6,7 +6,7 @@ const {ObjectID} = require('mongodb');
 const Blog = require('./Src/Models/Blog');
 const blogRouter = require('./Src/Routes/blogRouter')
 const mongoose = require('mongoose')
-
+const productRouter= require('./Src/Routes/productRouter')
 
 
 //configs
@@ -14,6 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/blogs', blogRouter);
+app.use('/store', productRouter);
 mongoose.connect('mongodb://localhost:27017/DocJosh', {useNewUrlParser: true}, (err) =>{
     if (err) console.log(err);
 });

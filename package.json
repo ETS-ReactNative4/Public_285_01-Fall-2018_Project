@@ -38,6 +38,7 @@
     "node": "^10.12.0",
     "node-forge": "^0.7.6",
     "opn": "^5.4.0",
+    "path": "^0.12.7",
     "postcss-value-parser": "^3.3.1",
     "promise": "^8.0.2",
     "public-encrypt": "^4.0.3",

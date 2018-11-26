@@ -1,12 +1,12 @@
 const Product = require('../Models/Product');
 const mongoose = require('mongoose');
-
+const fs = require('fs');
+const path = require('path');
 
 
 //Displays the product creation form with GET
 exports.product_create_get = (req, res) => {
-    res.send("NOT IMPLEMENTED: Product create GET")
-}
+    res.sendFile('store_form.html', { root: path.join(__dirname, '../public') });}
 
 //Handles product create on POST
 exports.product_create_post = (req, res) => {
@@ -18,6 +18,9 @@ exports.product_create_post = (req, res) => {
         price: req.body.price
     });
     
+    newProduct.imagePath.data = fs.readFileSync(req.file.path);
+    newProduct.imagePath.contentType = 'image/png';
+
     newProduct.save((err,doc) => {
         if(err) return console.log(err);
         
