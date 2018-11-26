@@ -41,7 +41,7 @@ export class Blogs extends Component {
                         <li key={blog.id}>
                             <div className="blogTitle">{blog.title} <br/></div>
                             <div className="blogText">{blog.blog_text} <br/> </div>
-                            <div className="blogCreated">Created: {blog.created} <br/> </div>
+                            <div className="blogCreated">Created: {blog.created.substring(0, 10)} <br/> </div>
                             <div><br/><br/></div>
                         </li>
                     ))}
