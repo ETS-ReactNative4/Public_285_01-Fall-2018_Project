@@ -5,7 +5,7 @@ const productSchema = new Schema({
     imagePath: {
         data: Buffer, 
         contentType: String,
-        required : false
+        required : true
     },
     title: {
         type: String, 
